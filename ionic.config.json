@@ -1,0 +1,7 @@
+{
+  "name": "Act2 CreateApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

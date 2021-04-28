@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" class="up">
+      <ion-back-button defaultHref="/tab3">
+      </ion-back-button>
+    </ion-button>
+    <ion-title>MESSAGE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row id="item100" *ngFor="let mess of messages">
+      <ion-avatar slot="end">
+        <img src="">
+      </ion-avatar>
+       <ion-col offset="5" size="7" class="message mymsg">
+         <span>{{mess.contents}}</span>
+       </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-row align-items-center no-padding>
+      <ion-col size="9">
+        <textarea autosize placeholder="Aa" [(ngModel)]="contents" class="MsgBox"></textarea>
+      </ion-col>
+    <ion-col size="3">
+      <ion-button (click)="sendMsg()" class="msgButt">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
